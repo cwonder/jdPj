@@ -1,0 +1,111 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /*去除移动端点击产生的高亮状态*/
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    font-family: 'Microsoft Yahei', sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+
+a{
+    text-decoration: none;
+    color: #666;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+textarea, input{
+    border: none;
+    outline: none;
+    /*去除iOS系统默认的扁平化*/
+    -webkit-appearance: none;
+}
+
+.clearfix::before,
+.clearfix::after{
+    content: '.';
+    height: 0;
+    line-height: 0;
+    display: block; /*出错点*/
+    visibility: hidden;
+    clear: both;
+}
+
+/*抽取所有类前缀为icon_*/
+[class^='icon_'],[class*=" icon_"]{
+    background: url("../images/sprites.png") no-repeat;
+    -webkit-background-size:200px 200px;
+    background-size:200px 200px;
+}
+
+.none_bottom_border{
+    border-bottom: 0 !important;
+}
+
+.f_l {
+    float: left;
+}
+
+.f_r {
+     float: right;
+ }
+
+.pl0 {
+    left: 0;
+}
+.pr0 {
+    right: 0;
+}
+
+
+/*******头部样式*****/
+.jd_category_header {
+    background: url("../images/header-bg.png") repeat-x;
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    z-index: 1;
+}
+
+.jd_category_header form {
+    height: 100%;
+
+}
+.jd_category_header input {
+    width: 78% ;
+    height: 80%;
+    margin: 5px 40px;
+    border: 1px solid #e5e5e5;
+    text-indent: 20px;
+}
+
+.jd_category_header a {
+    width: 40px;
+    height: 100%;
+    padding:10px 10px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-clip: content-box;
+    background-origin: content-box;
+}
+.jd_category_header .icon_back {
+    background-position: -20px 0;
+}
+
+.jd_category_header .icon_most {
+    background-position: -60px 0;
+}

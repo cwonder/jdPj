@@ -1,0 +1,285 @@
+@charset "UTF-8";
+body {
+    background: #f5f5f5;
+}
+.jd_cart {
+    position: relative;
+}
+
+.jd_cart .jd_category_header {
+    position: relative;
+}
+.jd_cart h3{
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight:400;
+}
+
+.jd_cart .safety_tip {
+    height: 36px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    background: white;
+}
+
+.jd_cart .safety_tip p {
+    width: 75%;
+    height: 36px;
+    margin:0 auto;
+    line-height: 36px;
+}
+.jd_cart .safety_tip p::before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/safe_icon.png");
+    -webkit-background-size: 16px 16px;
+    background-size: 16px 16px;
+    position: relative;
+    top: 3px;
+}
+
+/******** 购买商品类目详情*******/
+
+.jd_buyTemp {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+    border-top: 1px solid #e5e5e5;
+    /*border-bottom: 1px solid #e5e5e5;*/
+}
+
+/*购买商品标题样式*/
+.jd_buyTemp .jd_buyTemp_title {
+    position: relative;
+    width: 100%;
+    height: 36px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.jd_buyTemp_title span{
+    font-size: 15px;
+}
+.jd_buyTemp a.checked {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url("../images/shop-icon.png");
+    background-position: 0 0;
+    -webkit-background-size: 50px 100px;
+    background-size: 50px 100px;
+}
+/*选中的item打钩*/
+a.checked[checked]{
+    background-position: -24px 0;
+}
+
+.jd_buyTemp_title_logo {
+    margin-left: 36px;
+    line-height: 36px;
+}
+
+.jd_buyTemp_title_logo::before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/buy-logo.png");
+    -webkit-background-size: 16px 16px ;
+    background-size: 16px 16px ;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
+
+span.jd_buyTemp_title_hint {
+    float: right;
+    color: red;
+    font-size: 12px;
+    margin:10px 10px 0 0;
+}
+
+/*购买内容部分*/
+.jd_buyTemp_con section {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+
+
+}
+.jd_buyTemp_con_left {
+
+    height: 100%;
+}
+
+.jd_buyTemp_con section a.checked {
+    top: 40%;
+}
+
+.jd_buyTemp_con img {
+
+   position: absolute;
+    top: 15px;
+    left: 38px;
+}
+
+.jd_buyTemp_con_right {
+    margin-top: 10px;
+    position: relative;
+    margin-left: 120px;
+}
+.jd_buyTemp_con_right p {
+    height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+    /*word-break:break-all;*/
+    /*word-break: break-all;*/
+    /*text-overflow: ellipsis;*/
+    float: left;
+}
+
+.jd_buyTemp_con_right .price{
+    color:red;
+    height: 24px;
+    width: 100%;
+    float: left;
+
+}
+.jd_buyTemp_con_right_count {
+    float: left;
+    left: 0;
+    bottom: 0;
+}
+.jd_buyTemp_con_right_count .minus,
+.jd_buyTemp_con_right_count .add{
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    position: relative;
+}
+
+.jd_buyTemp_con_right_count .minus {
+    border-radius:4px 0 0 4px;
+    left: 4px;
+}
+.jd_buyTemp_con_right_count .add{
+    border-radius:0 4px 4px 0;
+    left: -4px;
+}
+
+.jd_buyTemp_con_right_count input {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    width: 52px;
+    height: 24px;
+    text-align: center;
+}
+/*垃圾桶*/
+.jd_buyTemp_con_right_delete {
+    float: right;
+    width: 18px;
+    height: 18px;
+
+}
+/*盖子*/
+.jd_buyTemp_con_right_delete .up{
+    display: block;
+    width: 18px;
+    height: 4px;
+    background: url("../images/delete_up.png");
+    -webkit-background-size: 18px 4px;
+    background-size: 18px 4px;
+    transition: all .3s ease;
+}
+
+/*垃圾桶*/
+.jd_buyTemp_con_right_delete .down{
+    position: relative;
+    top: -2px;
+    display: block;
+    width: 18px;
+    height: 17px;
+    background: url("../images/delete_down.png");
+    -webkit-background-size: 18px 17px;
+    background-size: 18px 17px;
+}
+/*垃圾桶翻盖效果*/
+.clickDelete {
+    transform: rotate(-45deg) ;
+    transform-origin:3px 7px;
+}
+
+
+/*蒙版*/
+.mask {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(0,0,0,.5);
+}
+.mask .box {
+    position: absolute;
+    width: 80%;
+    height: 20%;
+    text-align: center;
+    background-color: white;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+}
+.mask .box p {
+    text-align: center;
+    font-size: 18px;
+    height: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mask .box .item {
+    width: 90%;
+    height: 40%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top:4%;
+    border-top: 1px solid #e5e5e5;
+}
+.mask .box .item span {
+    display: inline-block;
+    width: 48%;
+    height: 40px;
+    line-height: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+.mask .box .item .close  {
+    border: 1px solid #e5e5e5;
+}
+
+.mask .box .item .sure  {
+    background: red;
+    color:white;
+    border: 1px solid red;
+}

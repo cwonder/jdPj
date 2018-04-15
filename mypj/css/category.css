@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#jd_category{
+    min-width:300px;
+    max-width:640px;
+    margin:0 auto;
+    height: 100%;
+}
+
+
+
+/*********下部分主要展示**********/
+.jd_category_main {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+
+}
+
+.jd_category_left {
+    width: 25%;
+    height: 100%;
+    background-color: #e5e5e5;
+    overflow: hidden;
+}
+
+.jd_category_left ul {
+
+    overflow: hidden;
+}
+
+.jd_category_left li {
+    border-right: 1px solid #ccc;
+    border-bottom: 0.5px solid #ccc;
+
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+}
+
+.jd_category_left li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+/*选中的样式*/
+.jd_category_left li.current{
+    background-color: white;
+    border-right:none;
+}
+.jd_category_left li.current a{
+    color:red  ;
+}
+
+/*分类右边*/
+
+.jd_category_right {
+    padding: 10px;
+    width: 75%;
+    overflow: hidden;
+}
+.jd_category_right>img {
+    width: 100%;
+}
+
+.jd_category_right_content {
+    width: 100%;
+    display: inline-block;
+}
+.jd_category_right h3 {
+    padding-top: 10px;
+}
+
+.jd_category_right .cell li {
+    width: 33.3%;
+    display: inline-block;
+    float: left;
+}.jd_category_right .cell li a {
+     display: block;
+ }
+.jd_category_right .cell img {
+    width: 100%;
+}
+.jd_category_right .cell p{
+    width: 100%;
+    text-align: center;
+}
